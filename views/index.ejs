@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+    <%- include("./partials/head.ejs") %>
 <head>
-
     <title>Pokemons</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="container">
-<h1>Pokemons</h1>
-<h2><a href="pokemons/new"><button type=button>Add New Pokemon></button></a> </h2>
+<body>
+    <%- include("./partials/header.ejs") %>
 
-<h3><% for (let pokemon in pokemons){ %>
-    <a href="/pokemons/<%=pokemon %>">
-         <%=pokemons[pokemon].name %> </a></h3> 
-   <h3><img src="<%= pokemons[pokemon].img %>" />
-<% } %></h3>
-
+    <h1>Pokemons</h1>
+    <div>    
+    <a href="/pokemons/new"><button type=button>Add New Pokemon</button></a> </div>
+    
+    <% for (let pokemon in pokemons){ %>
+        <li><a href="/pokemons/<%=pokemon %>">
+            <h2> <%=pokemons[pokemon].name %> </a>
+            <img src="<%= pokemons[pokemon].img %>" />
+        </li>
+    <% } %>
+            </h2>
 </body>
 </html>

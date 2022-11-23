@@ -4,7 +4,7 @@ const app=express()
 const PORT=3500
 const morgan=require('morgan') // logger for our request
 const pokemonsRoute=require('./controllers/pokedex')
-const pokenmons=require('./models/pokemons')
+
 
 app.use(morgan('tiny'))
 app.use(express.urlencoded({extended:true})) // parse html form data -> req.body

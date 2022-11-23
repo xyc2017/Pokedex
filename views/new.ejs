@@ -1,12 +1,16 @@
-
-<h1>Add New Pokemon</h1>
+<!DOCTYPE html>
+<html>
+    <%- include("./partials/head.ejs") %>
+    
 <body>
-    <link rel="stylesheet" href="/styles.css">
-<form action="/pokemon" method="post">
-    <input type="text" name="name" placeholder="pokemon name">
-    <input type="text" name="img" placeholder="pokemon image link">
-    <input type="text" name="type" placeholder="pokemon type">
-    <input type="submit" value="Add">
-
-</form>
+    <%- include('./partials/header.ejs') %>
+    <h1>Add New Pokemon</h1>
+    
+    <form action="/pokemons" method="POST">
+        <input type="text" name="name" placeholder="pokemon name">
+        <input type="text" name="img" placeholder="pokemon image link">
+        <input type="text" name="type" placeholder="pokemon type">
+        <input type="submit" value="Add">
+    </form>
 </body>
+</html>
