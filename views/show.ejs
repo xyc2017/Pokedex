@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <%- include("./partials/head.ejs") %>
-<body>
-    <%- include("./partials/header.ejs") %>
-<h1><%=pokemon.name %></h1>
-
    
-<div>
-    <img src="<%= pokemon.img %>" />
+<body>
+    
+<h1><%=pokemon.name %></h1>
+<div> 
     <h3><%=pokemon.type %></h3>
     <h3><%=pokemon.stats %></h3>
     <h3><%=pokemon.moves %></h3>
     <h3><%=pokemon.damages %></h3>
     <h3><%=pokemon.misc %></h3>
     
-    <a href="/<%= pokemon %>/edit"><button>EDIT</button></a>
+    <a href="/<%=pokemon.id%>/edit"><button>EDIT</button></a>
     <a href="/"></a><button>Return to Pokemons</button></a>
+  
 </div>
 </body>
+</html>

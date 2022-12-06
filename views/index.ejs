@@ -6,16 +6,16 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <%- include("./partials/header.ejs") %>
+
 
     <h1>Pokemons</h1>
     <div>    
     <a href="/pokemons/new"><button type=button>Add New Pokemon</button></a> </div>
     
-    <% for (let pokemon in pokemons){ %>
-        <li><a href="/pokemons/<%=pokemon %>">
-            <h2> <%=pokemons[pokemon].name %> </a>
-            <img src="<%= pokemons[pokemon].img %>" />
+    <% for (pokemon of pokemons){ %>
+        <li><a href="/pokemons/<%=pokemon.id %>">
+            <h2> <%=pokemon.name%> </a>
+            <img src="<%=pokemon.img %>" />
         </li>
     <% } %>
             </h2>
